@@ -23,7 +23,7 @@ export default function Rodape() {
     <footer>
       <div className="top">
         <Link className="logoFooter" href={`/`}>
-          <Image src="/imagens/Logo.png" width={200} height={60} alt="" />
+          <Image src="/Imagens/Logo.png" width={200} height={60} alt="" />
         </Link>
         <div className="menuFooter">
           <h2>Menu</h2>
