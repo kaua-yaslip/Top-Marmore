@@ -19,7 +19,7 @@ export default function Topo() {
         {/* Logo */}
         <Link href="/" className="logo" aria-label="Ir para Home">
           <NextImage
-            src="/Imagens/Top-Mármore-1-2.png"
+            src="/imagens/Logo.png"
             alt="Top Mármore"
             width={360}          // use um valor maior aqui
             height={120}         // proporcional (ajuste se necessário)
