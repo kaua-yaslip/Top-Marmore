@@ -1,0 +1,143 @@
+@use "../../styles/colors.scss" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: $color-white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 44px;
+    width: auto;
+    display: block;
+  }
+}
+
+/* MENU CENTRAL */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
+
+.link {
+  font-family: var(--font-poppins);
+  font-size: 0.95rem;
+  color: $color-text;
+  opacity: 0.9;
+  position: relative;
+  padding: 8px 2px;
+  transition: 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+    color: $color-black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    height: 2px;
+    width: 100%;
+    background: $color-accent;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.25s ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* CONTATOS À DIREITA */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: flex-end;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: $color-muted;
+  font-size: 0.85rem;
+  transition: 0.2s ease;
+
+  svg {
+    color: $color-accent;
+    font-size: 14px;
+  }
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.whats {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: $color-accent;
+  color: $color-white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.25s ease;
+
+  &:hover {
+    background: $color-accent-dark;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 980px) {
+  .bar {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 10px;
+  }
+
+  .nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .right {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contacts {
+    align-items: center;
+    text-align: center;
+  }
+}

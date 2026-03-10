@@ -1,0 +1,30 @@
+.titlePage {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  /* background-image is set inline via prop */
+  background-size: cover;
+  background-position: center;
+}
+
+
+.titlePage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* título */
+.titlePage h1 {
+  position: relative;
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}

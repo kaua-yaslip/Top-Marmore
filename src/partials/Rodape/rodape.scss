@@ -1,0 +1,331 @@
+@use "../../styles/colors.scss" as *;
+
+footer {
+  background-color: $color-bg-soft;
+  color: $color-text;
+
+  .top {
+    max-width: 85%;
+    padding: 70px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    line-height: 30px;
+
+    .menuFooter,
+    .contactFooter {
+      ul li {
+        @media (max-width: 768px) {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .contactFooter {
+      display: flex;
+      flex-direction: column;
+
+      ul li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $color-text;
+      }
+    }
+
+    li a {
+      font-family: var(--font-poppins);
+      position: relative;
+      width: fit-content;
+      color: $color-text;
+
+      &::before {
+        content: "";
+        background-color: $color-accent;
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.4s ease;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+
+      @media (max-width: 768px) {
+        justify-content: center;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+      font-family: var(--font-josefin);
+      color: $color-text;
+    }
+
+    .logoFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+  img {
+    width: 240px;   // ajuste visual
+    height: auto;   // mantém proporção (ESSENCIAL)
+  }
+}
+
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 40px;
+    }
+  }
+
+ .footerSelos {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    .logoYaslip {
+      width: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+
+      a {
+        width: 100%;
+      }
+
+      object {
+        width: 120px;
+        height: 120px;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+
+        img {
+          width: 130px;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 10px;
+
+      a {
+        &::before {
+          height: 0;
+        }
+      }
+    }
+  }
+  /* Faixa inferior */
+  .bottomRowFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    background-color: $color-black;
+    color: $color-white;
+    font-family: var(--font-poppins);
+
+    span {
+      color: $color-accent;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 90px;
+    }
+
+    img {
+      width: 42px;
+      height: auto;
+    }
+  }
+}
+
+/* =========================
+   WhatsApp Button (mantido)
+   ========================= */
+
+.whatsapp-btn-bg,
+.whatsapp-btn-config {
+  background-color: #43b91e;
+}
+
+.whatsapp-animate-circulo-pulse {
+  border-color: #43b91e;
+}
+
+footer {
+  background-color: $color-bg-soft;
+  color: $color-text;
+
+  .top {
+    max-width: 85%;
+    padding: 70px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    line-height: 30px;
+
+    .menuFooter,
+    .contactFooter {
+      ul li {
+        @media (max-width: 768px) {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .contactFooter {
+      display: flex;
+      flex-direction: column;
+
+      ul li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $color-text;
+      }
+    }
+
+    li a {
+      font-family: var(--font-poppins);
+      position: relative;
+      width: fit-content;
+      color: $color-text;
+
+      &::before {
+        content: "";
+        background-color: $color-accent;
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.4s ease;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+
+      @media (max-width: 768px) {
+        justify-content: center;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+      font-family: var(--font-josefin);
+      color: $color-text;
+    }
+
+    .logoFooter {
+      display: flex;
+      justify-content: center;
+      
+
+      img {
+        width: 230px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 40px;
+    }
+  }
+
+  /* Selos */
+  .footerSelos {
+    display: flex;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+    ul {
+      display: flex;
+      gap: 10px;
+
+      a::before {
+        display: flex;
+      }
+    }
+  }
+
+  /* Faixa inferior */
+  .bottomRowFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    background-color: $color-black;
+    color: $color-white;
+    font-family: var(--font-poppins);
+
+    span {
+      color: $color-accent;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 90px;
+    }
+
+    img {
+      width: 42px;
+      height: auto;
+    }
+  }
+}
+
+/* =========================
+   WhatsApp Button (mantido)
+   ========================= */
+
+.whatsapp-btn-bg,
+.whatsapp-btn-config {
+  background-color: #43b91e;
+}
+
+.whatsapp-animate-circulo-pulse {
+  border-color: #43b91e;
+}
