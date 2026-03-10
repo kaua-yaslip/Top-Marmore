@@ -50,7 +50,6 @@ export default function MostrasDecoracaoPage() {
           <section className={styles.grid}>
             {MOSTRAS.map((m, index) => (
               <motion.a
-                href={`/mostras-decoracao/`}
                 className={styles.card}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
