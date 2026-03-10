@@ -49,22 +49,19 @@ export default function MostrasDecoracaoPage() {
 
           <section className={styles.grid}>
             {MOSTRAS.map((m, index) => (
-              <motion.a
-                className={styles.card}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.05,
-                }}
-                viewport={{ once: true, amount: 0.2 }}
-              >
+              <div key={index} className={styles.card}>
                 <div className={styles.thumb}>
-                  <Image src={m.imagem} alt={m.nome} width={300} height={200} quality={100} />
+                  <Image
+                    src={m.imagem}
+                    alt={m.nome}
+                    width={300}
+                    height={200}
+                    quality={100}
+                  />
                 </div>
 
                 <div className={styles.cardLabel}>{m.nome}</div>
-              </motion.a>
+              </div>
             ))}
           </section>
         </div>
